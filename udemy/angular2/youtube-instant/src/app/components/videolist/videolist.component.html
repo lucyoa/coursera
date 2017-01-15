@@ -1,0 +1,39 @@
+<div class="container">
+  <div id="navbar" class="wrap">
+    <div class="logo">
+      <a href="/">Youtube Instant</a>
+    </div>
+    <div class="searchbar">
+      <form>
+        <div class="navbar-form navbar-left form-group" role="search">
+          <input class="form-control" type="text" placeholder="Search Video..." [(ngModel)]="searchStr" name="searchStr" value="{{searchStr}}" (keyup)="searchVideo()" autofocus onfocus="this.select()">
+        </div>
+      </form>
+    </div>
+    <div *ngIf="selectedVideo" class="title">
+      {{selectedVideo.title}}
+    </div>
+  </div>
+  <div class="wrap container">
+    <div id="video">
+      <div *ngIf="selectedVideo">
+        <iframe width="800"
+                height="500"
+                frameborder="0"
+                allowfullscreen
+                [src]="selectedVideo?.videoId | youtubeSafeUrl">
+        </iframe>
+      </div>
+    </div>
+    <div id="video-list">
+      <div class="video-list">
+        <div *ngFor="let video of videos" (click)="setVideo(video)" class="video-list-item">
+          <a href="#{{selectedVideo.title}}">
+            <div class="title">{{video.title}}</div>
+            <img src="{{video.thumbnail}}">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

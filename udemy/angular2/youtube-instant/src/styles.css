@@ -1,0 +1,67 @@
+body {
+  background-color: #eee;
+}
+
+.wrap {
+  overflow: auto;
+}
+
+#navbar .logo {
+  float: left;
+  width: 180px;
+  padding: 12px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#navbar .logo a:hover {
+  text-decoration: none;
+}
+
+#navbar .searchbar {
+  float: left;
+  width: 360px;
+}
+#navbar .searchbar input {
+  width: 360px;
+}
+
+#navbar .title {
+  float: left;
+  width: 580px;
+  overflow: hidden;
+  padding: 12px;
+  font-size: 16px;
+  margin-left: 20px;
+  white-space: nowrap;
+}
+
+#video {
+  float: left;
+  width: 800px;
+}
+
+#video-list {
+  float: right;
+  width: 300px;
+  display: block;
+}
+
+#video-list .video-list-item {
+  overflow: auto;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+
+#video-list .title {
+  float: right;
+  font-size: 12px;
+  width: 190px;
+  padding: 5px;
+}
+
+#video-list img {
+  float: left;
+  width: 100px;
+}
